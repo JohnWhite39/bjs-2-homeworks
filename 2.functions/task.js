@@ -66,7 +66,6 @@ function averageEvenElementsWorker(...arr) {
   return (sumEven / countEven).toFixed(2);
 }
 
-// Функция мясорубки
 function makeWork(arrOfArr, func) {
   let maxWorkerResult = -Infinity;
 
