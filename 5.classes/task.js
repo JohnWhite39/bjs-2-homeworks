@@ -43,11 +43,26 @@ class Book extends PrintEditionItem {
   }
 }
 
-class NovelBook extends Book {}
+class NovelBook extends Book {
+  constructor(author, name, releaseDate, pagesCount) {
+    super(author, name, releaseDate, pagesCount);
+    this.type = "novel";
+  }
+}
 
-class FantasticBook extends Book {}
+class FantasticBook extends Book {
+  constructor(author, name, releaseDate, pagesCount) {
+    super(author, name, releaseDate, pagesCount);
+    this.type = "fantastic";
+  }
+}
 
-class DetectiveBook extends Book {}
+class DetectiveBook extends Book {
+  constructor(author, name, releaseDate, pagesCount) {
+    super(author, name, releaseDate, pagesCount);
+    this.type = "detective";
+  }
+}
 
 const sherlock = new PrintEditionItem(
   "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
