@@ -28,14 +28,14 @@ class PrintEditionItem {
   }
 }
 
-class Magazine extends PointeditionItem {
+class Magazine extends PrinteditionItem {
   constructor(name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount);
     this.type = "magazine";
   }
 }
 
-class Book extends PointEditionItem {
+class Book extends PrintEditionItem {
   constructor(author, name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount);
     this.author = author;
