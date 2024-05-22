@@ -8,27 +8,27 @@ class PrintEditionItem {
   }
 
   fix() {
-    if(this.state < 100) {
+    if (this.state < 100) {
       this.state *= 1.5;
     }
   }
 
   set state(newState) {
     if (newState < 0) {
-      this.state = 0;
+      this._state = 0;
     } else if (newState > 100) {
-      this.state = 100;
+      this._state = 100;
     } else {
-      this.state = newState;
+      this._state = newState;
     }
   }
 
-  get state () {
+  get state() {
     return this._state;
   }
 }
 
-class Magazine extends PrinteditionItem {
+class Magazine extends PrintEditionItem {
   constructor(name, releaseDate, pagesCount) {
     super(name, releaseDate, pagesCount);
     this.type = "magazine";
@@ -44,18 +44,21 @@ class Book extends PrintEditionItem {
 }
 
 class NovelBook extends Book {}
+
 class FantasticBook extends Book {}
+
 class DetectiveBook extends Book {}
+
 const sherlock = new PrintEditionItem(
   "Полное собрание повестей и рассказов о Шерлоке Холмсе в одном томе",
   2019,
   1008
 );
 
-console.log(sherlock.releaseDate);
-console.log(sherlock.state);
+console.log(sherlock.releaseDate); 
+console.log(sherlock.state); 
 sherlock.fix();
-console.log(sherlock.state);
+console.log(sherlock.state); 
 
 const picknick = new FantasticBook(
   "Аркадий и Борис Стругацкие",
@@ -64,8 +67,8 @@ const picknick = new FantasticBook(
   168
 );
 
-console.log(picknick.author);
+console.log(picknick.author); 
 picknick.state = 10;
-console.log(picknick.state);
+console.log(picknick.state); 
 picknick.fix();
-console.log(picknick.state);
+console.log(picknick.state); 
